@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+  <%- include("./partials/header.ejs") %>
+  <body>
+    <div
+      class="container max-w-[700px] my-[50px] bg-white border border-black mx-auto p-[15px] rounded-sm font-walone tracking-wide"
+    >
+      <div class="flex">
+        <img src="img/book.svg" class="w-6 mr-2" />
+        <h1 class="">မြန်မာစကားပုံအက္ခရာစဥ်ဇယား</h1>
+      </div>
+      <p class="text-sm leading-6 mt-4 text-gray-500">
+        <span class="mr-10"></span>
+        "စကားပုံ" ဟူသည် "လူအများ ဆင်ခြင်မှတ်သားဖွယ် ဖြစ်အောင် စံပြုပုံခိုင်း
+        အသုံးပြုလေ့ရှိသော ထိရောက်ကျစ်လျစ်သည့် စကားရပ်" ဟု စာပေပညာရှင်တို့က
+        ဖွင့်ဆိုသတ်မှတ်ကြပါသည်။
+      </p>
+      <div class="text-center mt-6">
+        <h1 class="mb-2 font-bold">
+          မိမိကြည့်ရှုလိုသော သက်ဆိုင်ရာ အက္ခရာကိုနှိပ်၍ ရှာဖွေဖတ်ရှုနိုင်ပါသည်။
+        </h1>
+        <table class="w-full border-separate border border-slate-400">
+          <thead>
+            <tr>
+              <th class="border border-slate-300" colspan="4">
+                မြန်မာစကားပုံအက္ခရာစဉ်ဇယား
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            <% title.forEach((item, index) => { if (index % 4 === 0) { %>
+            <tr>
+              <% } %>
+              <td data-id="<%= index + 1 %>" class="border border-slate-300 p-1 cursor-pointer text-gray-600 hover:text-black hover:font-bold"><%= item.TitleName %></td>
+              <% if (index % 4 === 3 || index === title.length - 1) { %>
+            </tr>
+            <% } }); %>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>

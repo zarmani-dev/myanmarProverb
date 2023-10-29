@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./partials/header.ejs") %>
+<body>
+    <div
+      class="container max-w-[700px] my-[50px] bg-white border border-black mx-auto p-[15px] rounded-sm font-walone tracking-wide"
+    >
+      <div class="flex">
+        <img src="img/book.svg" class="w-6 mr-2" />
+        <h1 class="">"<%= proverbTitle %>" (စကားပုံ)</h1>
+      </div>
+      <table class="w-full border-collapse border border-slate-400 mt-4">
+        <tbody>
+            <% proverbs.forEach(proverb => { %>
+                <tr>
+                    
+                    <td class="border border-slate-300 p-1 cursor-pointer text-black">
+                        <img src="img/pencil.svg" class="w-3 inline" alt="">
+                        <%= proverb.ProverbName %>
+                    </td>
+                </tr>
+            <% }) %>
+        </tbody>
+      </table>
+    </div>
+</body>
+</html>
