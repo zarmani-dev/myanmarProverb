@@ -18,7 +18,8 @@ app.get("/", (req, res) => {
 app.get("/:id", (req, res) => {
     const id = req.params.id;
     const filteredProverb = content.filter(proverb => proverb.TitleId == id);
-    res.render("details", {proverbTitle: title[id - 1].TitleName,  proverbs: filteredProverb})
+    const sortedProverb = filteredProverb.sort((a,b) => a.ProverbId - b.ProverbId)
+    res.render("details", {proverbTitle: title[id - 1].TitleName,  proverbs: sortedProverb})
 })
 
 app.get("/:id/:proverbId", (req, res) => {
