@@ -3,17 +3,24 @@
     <%- include("./partials/header.ejs") %>
 <body>
     <div
-      class="container max-w-[700px] my-[50px] bg-white border border-black mx-auto p-[15px] rounded-sm font-walone tracking-wide"
+      class="container max-w-[700px] my-[50px] bg-white border border-black mx-auto p-[15px] rounded-sm font-walone tracking-wide relative"
     >
+    <%- include("./partials/prevPage.ejs") %>
       <div class="flex">
         <img src="/img/book.svg" class="w-6 mr-2" />
-        <h1 class=""><%= proverbDetails[0].ProverbName %></h1>
+        <h1 class="" data-titleId="<%= proverbDetails[0].TitleId %>"><%= proverbDetails[0].ProverbName %></h1>
       </div>
       <p class="text-center font-bold mt-4">(စကားပုံ)</p>
       <div class="">
         <span class=""><span class="mr-10"></span><%= proverbDetails[0].ProverbDesp %></span>
       </div>
     </div>
-    <script src=""></script>
+    <script>
+        const prevPage = document.querySelector("#prevPage");
+        const titleId = document.querySelector("h1").dataset.titleid;
+        prevPage.addEventListener("click", () => {
+            window.location.href = `/${titleId}`;
+        })
+    </script>
 </body>
 </html>

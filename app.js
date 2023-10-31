@@ -15,14 +15,6 @@ app.get("/", (req, res) => {
     res.render("index", {title})
 })
 
-app.get("/title", (req, res) => {
-    res.send(title)
-})
-
-app.get("/content", (req, res) => {
-    res.send(content)
-})
-
 app.get("/:id", (req, res) => {
     const id = req.params.id;
     const filteredProverb = content.filter(proverb => proverb.TitleId == id);
@@ -34,7 +26,4 @@ app.get("/:id/:proverbId", (req, res) => {
     const proverbId = req.params.proverbId;
     const filteredProverb = content.filter(proverb => proverb.TitleId == id && proverb.ProverbId == proverbId);
     res.render("about", {proverbDetails: filteredProverb})
-    // const id = req.params.id;
-    // const filteredProverb = content.filter(proverb => proverb.TitleId == id);
-    // res.render("details", {proverbTitle: title[id - 1].TitleName,  proverbs: filteredProverb})
 })

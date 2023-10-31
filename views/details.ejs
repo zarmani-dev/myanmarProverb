@@ -3,8 +3,9 @@
     <%- include("./partials/header.ejs") %>
 <body>
     <div
-      class="container max-w-[700px] my-[50px] bg-white border border-black mx-auto p-[15px] rounded-sm font-walone tracking-wide"
+      class="container max-w-[700px] my-[50px] bg-white border border-black mx-auto p-[15px] rounded-sm font-walone tracking-wide relative"
     >
+    <%- include("./partials/prevPage.ejs") %>
       <div class="flex">
         <img src="img/book.svg" class="w-6 mr-2" />
         <h1 class="">"<%= proverbTitle %>" (စကားပုံ)</h1>
@@ -21,6 +22,7 @@
             <% }) %>
         </tbody>
       </table>
+      <h1 class="font-bold text-center mt-4 text-[25px]">"<%= proverbTitle %>" အက္ခရာ ပြီး၏။</h1>
     </div>
     <script src="details.js"></script>
 </body>
