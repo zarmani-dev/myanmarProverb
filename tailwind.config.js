@@ -8,7 +8,7 @@ module.exports = {
     extend: {
       fontFamily: {
         'walone': ['Z06-Walone']
-      }
+      },
     },
   },
   plugins: [],
