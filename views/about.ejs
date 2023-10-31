@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("./partials/header.ejs") %>
+<body>
+    <div
+      class="container max-w-[700px] my-[50px] bg-white border border-black mx-auto p-[15px] rounded-sm font-walone tracking-wide"
+    >
+      <div class="flex">
+        <img src="/img/book.svg" class="w-6 mr-2" />
+        <h1 class=""><%= proverbDetails[0].ProverbName %></h1>
+      </div>
+      <p class="text-center font-bold mt-4">(စကားပုံ)</p>
+      <div class="">
+        <span class=""><span class="mr-10"></span><%= proverbDetails[0].ProverbDesp %></span>
+      </div>
+    </div>
+    <script src=""></script>
+</body>
+</html>

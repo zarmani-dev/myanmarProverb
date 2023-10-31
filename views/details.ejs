@@ -11,17 +11,17 @@
       </div>
       <table class="w-full border-collapse border border-slate-400 mt-4">
         <tbody>
-            <% proverbs.forEach(proverb => { %>
+            <% proverbs.forEach((proverb, index) => { %>
                 <tr>
-                    
-                    <td class="border border-slate-300 p-1 cursor-pointer text-black">
+                    <td class="border border-slate-300 p-1 cursor-pointer text-black" data-titleId="<%=proverb.TitleId %>" data-proverbId="<%= index + 1 %>">
                         <img src="img/pencil.svg" class="w-3 inline" alt="">
-                        <%= proverb.ProverbName %>
+                        <%=  proverb.ProverbName %>
                     </td>
                 </tr>
             <% }) %>
         </tbody>
       </table>
     </div>
+    <script src="details.js"></script>
 </body>
 </html>
