@@ -5,7 +5,9 @@
     <div
       class="container max-w-[700px] my-[10px] md:my-[50px] bg-white border-0 md:border border-black mx-auto p-[15px] rounded-sm font-walone tracking-wide relative"
     >
-    <%- include("./partials/prevPage.ejs") %>
+    <div id="prevPage">
+      <img src="/img/back-arrow.svg" class="w-5 absolute right-6 cursor-pointer">
+    </div>
       <div class="flex">
         <img src="/img/book.svg" class="w-6 mr-2" />
         <h1 class="" data-titleId="<%= proverbDetails[0].TitleId %>"><%= proverbDetails[0].ProverbName %></h1>
